@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day 2025</title>
+    <link rel="stylesheet" href="vday.css">
+</head>
+<body>
+    <div class="valentines_card" id="card">
+        <div class="front_card">
+            <img src="vday.png" class="front_img" alt="Front of Card">
+            <div class="front_text">
+                <h3>Ivy Louise A. Fernandez</h3>
+            </div>    
+        </div>
+        <div class="inside_card">
+            <img src="inside.png" class="inside_img" alt="Inside of Card">
+            <audio id="valentineSong">
+                <source src="MadeForMe.mp3" type="audio/mp3">
+            </audio>
+            <div class="inside_text">
+                <h4>Will you be my</h4>
+                <h3>Valentine?</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const card = document.getElementById("card");
+            const audio = document.getElementById("valentineSong");
+
+            card.addEventListener("mouseenter", function () {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            });
+        });
+    </script>
+</body>
+</html>
